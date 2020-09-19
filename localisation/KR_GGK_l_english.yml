@@ -1,8 +1,5 @@
 ﻿l_english:
 
-####국명####
-KOR_social_conservative:0 "일본령 조선"
-
 ####국가 설명###
 
 
@@ -91,8 +88,8 @@ KOR_national_populist_party_long:0 "조선민족청년단"
  GGK_form_joeson_republic_desc:0 "GGK_form_joeson_republic_desc"
  GGK_overseas_help:0 "해외의 도움 모색"
  GGK_national_call:0 "국가총동원법 제정"
- GGK_aus_help:0 "호주에 물자 요청"
- GGK_canada_help:0 "캐나다에 도움 요청"
+ GGK_aus_help:0 "호주에 인력 요청"
+ GGK_canada_help:0 "캐나다에 인력 요청"
  GGK_canada_help_desc:0 "비록 캐나다는 영국에서 도망왔지만 아직까지 강대국입니다 이들에게 물자를 요청하는것도 좋은 방법일것입니다"
  GGK_imperial_government_plus:0 "황실-임정 합작"
  GGK_imperial_government_plus_desc:0 "황실과 임정은 거의 각자 활동하고 있습니다 이들을 합작시키면 더 큰 시너지를 발휘할것입니다"

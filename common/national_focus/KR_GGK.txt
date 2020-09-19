@@ -164,6 +164,10 @@ focus_tree = {
 		prerequisite = {
 			focus = GGK_korea_independence
 		}
+		completion_reward = {
+		CAN  = { add_opinion_modifier = { target = ROOT modifier = in_faction } }
+		AST  = { add_opinion_modifier = { target = ROOT modifier = in_faction } }
+		}
 		x = 14
 		y = 2
 
@@ -175,6 +179,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GGK_overseas_help
 		}
+		completion_reward = {
+			add_manpower = 54175
+		}
 		x = 13
 		y = 3
 
@@ -185,6 +192,9 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = GGK_overseas_help
+		}
+		completion_reward = {
+			add_manpower = 50000
 		}
 		x = 15
 		y = 3
