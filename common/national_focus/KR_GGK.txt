@@ -210,6 +210,9 @@ focus_tree = {
 		prerequisite = {
 			focus = GGK_aus_help
 		}
+		completion_reward = {
+			country_event = GGK.3
+		}
 		x = 14
 		y = 4
 
@@ -220,6 +223,9 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = GGK_imperial_government_plus
+		}
+		completion_reward = {
+		
 		}
 		x = 14
 		y = 5

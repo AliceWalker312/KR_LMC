@@ -54,7 +54,7 @@ country_event = {
 	}
 }
 
-####국내 진공작전####
+####황실-임정 합작####
 country_event = {
     id = GGK.3
     title = GGK.3.t
@@ -63,43 +63,8 @@ country_event = {
 
     is_triggered_only = yes
     fire_only_once = yes
+	
     option = {
         name = GGK.3.a
-			GGK = {
-				remove_state_core = 525
-				remove_state_core = 527
-				remove_state_core = 797
-				remove_state_core = 798
-				remove_state_core = 799
-				remove_state_core = 800
-				remove_state_core = 801
-				remove_state_core = 802
-				remove_state_core = 803
-				remove_state_core = 804
-			}
-            KOR = {
-                transfer_state = 1102
-				transfer_state = 1103
-				transfer_state = 1104
-				transfer_state = 527
-				transfer_state = 1106
-                set_capital = 525
-                load_oob = KOR_War_of_Independence
-                KOR_create_units = yes
-                KOR_add_equipments_to_stockplie = yes
-                add_political_power = 1000
-			}
-			KOR = {
-				declare_war_on = {
-					target = GGK
-					type = take_core_state
-				}
-			}
-			KOR = { 
-				change_tag_from = GGK 
-				set_country_flag = KOR_revolt_flag
-			}
-			
-		}
-    }
+	}
 }
