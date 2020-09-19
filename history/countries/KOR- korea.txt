@@ -1,0 +1,60 @@
+capital = 525
+OOB = "KOR_1936"
+set_stability = 0.45
+set_war_support = 0.26
+set_research_slots = 3
+set_convoys = 130
+
+JAP = {
+	set_autonomy = {
+		target = KOR
+		autonomy_state = kr_colonial_government
+	}
+}
+
+add_ideas = {
+GGK_japanese_general
+GGK_independence
+}
+
+set_politics = {
+	ruling_party = social_conservative
+	last_election = "1931.3.8"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Pak Hon yong"
+	desc = ""
+	picture = "gfx/leaders/KOR/Portrait_KOR_Pak_Hon_yong.dds"
+	expire = "1965.1.1"
+	ideology = totalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "National Council of Joseon Trade Unions"
+	desc = ""
+	picture = "gfx/leaders/KOR/Portrait_KOR_NCJTU.dds"
+	expire = "1965.1.1"
+	ideology = syndicalist_subtype
+	traits = {}
+}
+
+create_country_leader = {
+	name = "Cho Bong Am"
+	desc = ""
+	picture = "gfx/leaders/KOR/Portrait_KOR_Cho_Bong_am.tga"
+	expire = "1965.1.1"
+	ideology = radical_socialist_subtype
+	traits = {}
+}
+create_country_leader = {
+	name = "Kazushige Ugaki"
+	desc = ""
+	picture = "gfx/leaders/GGK/Portrait_Kazushige_Ugaki.dds"
+	expire = "1965.1.1"
+	ideology = social_conservative_subtype
+	traits = {}
+}
