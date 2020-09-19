@@ -1,0 +1,6 @@
+KOR_ind_decisions = {
+	icon = decision_revolt
+	visible = {
+		has_country_flag = KOR_revolt_flag
+	}
+}

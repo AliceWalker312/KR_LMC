@@ -95,7 +95,11 @@ country_event = {
 					type = take_core_state
 				}
 			}
-			KOR = { change_tag_from = GGK }
+			KOR = { 
+				change_tag_from = GGK 
+				set_country_flag = KOR_revolt_flag
+			}
+			
 		}
     }
 }
