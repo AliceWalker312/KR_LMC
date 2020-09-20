@@ -19,15 +19,5 @@ on_actions = {
             }
         }
     }
-	on_startup = {
-        effect = {
-             KOR = {
-      country_event = {
-          id = GGK.4
-          days = 0
-                  }
-            }
-        }
-    }
 }
     

@@ -68,3 +68,30 @@ country_event = {
         name = GGK.3.a
 	}
 }
+
+####대한독립####
+country_event = {
+    id = GGK.4
+    title = GGK.4.t
+    desc = GGK.4.d
+    picture = GFX_report_event_KOR_kim_koo_speech
+
+    is_triggered_only = yes
+    fire_only_once = yes
+	
+    option = {
+        name = GGK.4.a
+		create_country_leader = {
+	        name = "KOREA PROVISIONAL GOVERNMENT"
+	        desc = ""
+	        picture = "gfx/leaders/GGK/Portrait_CPKI.dds"
+	        expire = "1965.1.1"
+	        ideology = social_liberal_subtype
+        }
+		set_party_name = {
+				ideology = social_conservative
+				long_name = KOR_kim_koo_party
+				name = KOR_kim_koos_party
+		}
+	}
+}

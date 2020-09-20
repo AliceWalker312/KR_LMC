@@ -280,6 +280,7 @@ focus_tree = {
 			focus = GGK_qing_military_training
 		}
 		completion_reward = {
+			country_event = GGK.4
 			set_country_flag = KOR_revolt_flag
 			start_civil_war = {
 				ruling_party = social_liberal 
@@ -296,6 +297,24 @@ focus_tree = {
 		}
 		x = 14
 		y = 6
+
+	}
+	focus = {
+		id = GGK_independence1
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 10.00
+		prerequisite = {
+			focus = GGK_independence_war
+		}
+		available = {
+			is_puppet = no
+			has_war = no
+		}
+		completion_reward = {
+			load_focus_tree =
+		}
+		x = 14
+		y = 7
 
 	}
 }

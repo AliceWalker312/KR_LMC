@@ -151,7 +151,7 @@ bookmarks = {
 			}
 		}
 		
-		"GGK" = {
+		"KOR" = {
 			minor = yes
 			history = "GGK_KR_GATHERING_STORM_DESC"
 			ideology = social_conservative
