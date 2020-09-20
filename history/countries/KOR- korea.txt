@@ -1,5 +1,5 @@
 capital = 525
-OOB = "KOR_1936"
+OOB = "KOR_ind_1"
 set_stability = 0.45
 set_war_support = 0.26
 set_research_slots = 3
