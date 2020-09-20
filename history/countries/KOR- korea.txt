@@ -15,6 +15,7 @@ JAP = {
 add_ideas = {
 GGK_japanese_general
 GGK_independence
+GGK_nopay
 }
 
 set_politics = {

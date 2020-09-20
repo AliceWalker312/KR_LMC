@@ -39,6 +39,10 @@ KOR_national_populist_party_long:0 "조선민족청년단"
  GGK_national_law_desc:0 "국가 총동원법으로 많은 인력을 끌어모을수 있을것입니다"
  GGK_japan_pray:0 "황국 신민의 서사"
  GGK_japan_pray_desc:0 "1.우리는 황국신민이다. 충성으로써 군국에 보답하련다. 2.우리 황국신민은 신애협력하여 단결을 굳게 하련다. 3.우리 황국신민은 인고단련하여 힘을 길러 황도를 선양하련다."
+ GGK_rename:0 "창씨개명"
+ GGK_rename_desc:0 "창씨개명을 한 사람에 한하여 모든 국정 운영을 가능케 했습니다. 그결과 많은 사람이 창씨개명을 하였지만 거부하는 사람도 늘었습니다"
+ GGK_qing_military:0 "청나라의 군대 훈련법"
+ GGK_qing_military_desc:0 "청나라의 훈련기술을 본떠 만든 훈련법으로 군대의 훈련을 가속화 시킬수 있을것입니다"
 
 ####이벤트####
  GGK.0.t:0 "카이저라이히 버전 LAND OF THE MORNING CALM에 어서오십시오"

@@ -18,6 +18,15 @@ ideas = {
 				stability_factor = -0.05
 			}
 		}
+		GGK_nopay = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_nopay"}
+			picture = idea_GGK_nopay
+			modifier = {
+				production_factory_max_efficiency_factor = -0.5
+				consumer_goods_factor = -0.5
+				industrial_capacity_factory = -0.5
+			}
+		}
 		####내선일체 국민정신####
 		GGK_japanization = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_japanization"}
@@ -40,6 +49,20 @@ ideas = {
 			picture = idea_GGK_japan_pray
 			modifier = {
 				stability_factor = 0.05
+			}
+		}
+		GGK_rename = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_rename"}
+			picture = idea_GGK_rename
+			modifier = {
+				stability_factor = -0.05
+			}
+		}
+		GGK_qing_military = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_qing_military"}
+			picture = idea_GGK_qing_military
+			modifier = {
+				training_time_army_factor = -0.05
 			}
 		}
 		

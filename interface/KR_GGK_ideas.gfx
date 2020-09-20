@@ -22,4 +22,16 @@ spriteTypes = {
 		name = "GFX_idea_GGK_japan_pray"
 		texturefile = "gfx/interface/ideas/idea_GGK_japan_pray.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_GGK_rename"
+		texturefile = "gfx/interface/ideas/idea_GGK_rename.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GGK_qing_military"
+		texturefile = "gfx/interface/ideas/idea_GGK_qing_military.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_GGK_nopay"
+		texturefile = "gfx/interface/ideas/idea_GGK_nopay.dds"
+	}
 }

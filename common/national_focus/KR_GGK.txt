@@ -225,7 +225,9 @@ focus_tree = {
 			focus = GGK_imperial_government_plus
 		}
 		completion_reward = {
-		
+			KOR = {
+				add_ideas = { idea = GGK_qing_military }
+			}
 		}
 		x = 14
 		y = 5
@@ -237,6 +239,11 @@ focus_tree = {
 		cost = 5.00
 		prerequisite = {
 			focus = GGK_imperial_pray
+		}
+		completion_reward = {
+			KOR = {
+				add_ideas = { idea = GGK_rename }
+			}
 		}
 		x = 5
 		y = 5
@@ -273,6 +280,7 @@ focus_tree = {
 			focus = GGK_qing_military_training
 		}
 		completion_reward = {
+			set_country_flag = KOR_revolt_flag
 			start_civil_war = {
 				ruling_party = social_liberal 
 				ideology = social_conservative
