@@ -16,11 +16,11 @@ KOR_ind_decisions = {
 		
 		complete_effect = {
 			set_country_flag = second_con
-			load_obb = 
+			load_oob = KOR_ind_1
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 	}
 	
@@ -40,10 +40,11 @@ KOR_ind_decisions = {
 
 		complete_effect = {
 			clr_country_flag = second_con
+			load_oob = KOR_ind_1
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 	}
 	
@@ -63,10 +64,12 @@ KOR_ind_decisions = {
 
 		complete_effect = {
 			clr_country_flag = third_con
+			clr_country_flag = KOR_revolt_flag
+			load_oob = KOR_ind_1
 		}
 
 		ai_will_do = {
-			factor = 1
+			factor = 10
 		}
 	}
 }
