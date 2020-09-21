@@ -294,6 +294,96 @@ focus_tree = {
 				keep_unit_leaders = {
 				}
 			}
+			create_corps_commander = {
+  name = "김원봉"
+  picture = "kim_won_bong.dds"
+  traits = {
+			 }
+  skill = 2
+
+  attack_skill = 5
+  defense_skill = 4
+  planning_skill = 3
+  logistics_skill = 4
+}
+
+create_corps_commander = {
+  name = "김석원"
+  picture = "kim_suk_won.dds"
+  traits = {
+			 }
+  skill = 1
+
+  attack_skill = 3
+  defense_skill = 4
+  planning_skill = 3
+  logistics_skill = 3
+}
+
+create_field_marshal = {
+  name = "김좌진"
+  picture = "j_wa_jin.dds"
+  traits = { war_hero
+			 }
+  skill = 4
+
+  attack_skill = 6
+  defense_skill = 5
+  planning_skill = 5
+  logistics_skill = 4
+}
+create_field_marshal = {
+  name = "홍범도"
+  picture = "bum_do.dds"
+  traits = {
+			 }
+  skill = 4
+
+  attack_skill = 6
+  defense_skill = 4
+  planning_skill = 5
+  logistics_skill = 4
+}
+
+create_field_marshal = {
+  name = "송호성"
+  picture = "song_ho_sung.dds"
+  traits = { cavalry_officer
+			 }
+  skill = 4
+
+  attack_skill = 6
+  defense_skill = 5
+  planning_skill = 5
+  logistics_skill = 4
+}
+
+create_corps_commander = {
+  name = "이강"
+  picture = "Yi_Kang.dds"
+  traits = { politically_connected
+			 media_personality
+			 }
+  skill = 3
+
+  attack_skill = 5
+  defense_skill = 6
+  planning_skill = 2
+  logistics_skill = 4
+}
+
+create_corps_commander = {
+  name = "이우"
+  picture = "Portrait_KOR_Yi_Wu.dds"
+  traits = { politically_connected
+			 }
+  skill = 2
+
+  attack_skill = 6
+  defense_skill = 5
+  planning_skill = 3
+  logistics_skill = 5
+}
 		}
 		x = 14
 		y = 6
@@ -312,7 +402,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			news_event = GGK_news.1
-			load_focus_tree =
+			load_focus_tree = LMC_korea
 		}
 		x = 14
 		y = 7
