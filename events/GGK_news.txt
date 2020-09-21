@@ -1,0 +1,35 @@
+add_namespace = GGK_news
+
+####대한독립####
+news_event = {
+	id = GGK_news.1
+	title = GGK_news.1.t
+	desc = GGK_news.1.desc
+	picture = GFX_news_event_kor_independence
+	 
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = GGK_news.1.a
+		trigger = {
+			original_tag = KOR
+		}
+	}
+	option = {
+		name = GGK_news.1.b
+		trigger = {
+			original_tag = JAP
+		}
+	}
+	option = {
+		name = wtt_news.65.b
+		trigger = { 
+			NOT = { 
+				original_tag = KOR
+				original_tag = JAP
+			}
+		}
+	}
+}

@@ -302,7 +302,7 @@ focus_tree = {
 	focus = {
 		id = GGK_independence1
 		icon = GFX_focus_generic_diplomatic_treaty
-		cost = 10.00
+		cost = 1.00
 		prerequisite = {
 			focus = GGK_independence_war
 		}
@@ -311,6 +311,7 @@ focus_tree = {
 			has_war = no
 		}
 		completion_reward = {
+			news_event = GGK_news.1
 			load_focus_tree =
 		}
 		x = 14
