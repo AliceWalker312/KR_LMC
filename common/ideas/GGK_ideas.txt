@@ -65,7 +65,116 @@ ideas = {
 				training_time_army_factor = -0.05
 			}
 		}
-		
-		
+		GGK_civil_life = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_civil_life"}
+			picture = idea_civil_life
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+		GGK_civil_life1 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_civil_life1"}
+			picture = idea_civil_life
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.1
+				
+			}
+		}
+		GGK_gukminyungum = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_gukminyungum"}
+			picture = idea_civil_life
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.2
+				
+			}
+		}
+		GGK_national_assambly = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_national_assambly"}
+			picture = idea_idea_KOR_empire_royal_family
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.2
+				
+			}
+		}
+		GGK_kim_koo = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_kim_koo"}
+			picture = warsangali_arsenal
+			modifier = {
+				political_power_gain = 0.2
+				
+			}
+		}
+		GGK_phlip_jason = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_phlip_jason"}
+			picture = warsangali_arsenal
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.2
+				
+			}
+		}
+		GGK_peace_rev = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_peace_rev"}
+			picture = warsangali_arsenal
+			modifier = {
+				stability_factor = 0.10
+				
+			}
+		}
+		GGK_national_assambly2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_national_assambly2"}
+			picture = soviet_german_friendship
+			modifier = {
+				stability_factor = 0.10
+				
+			}
+		}
+		GGK_god_save_the_emperor = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_god_save_the_emperor"}
+			picture = death_men
+			modifier = {
+				stability_factor = 0.10
+				
+			}
+		}
+		GGK_yi_un = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_yi_un"}
+			picture = LIT_crown_4
+			modifier = {
+				stability_factor = 0.10
+				
+			}
+		}
+		GGK_nation_law = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_nation_law"}
+			picture = triumphant_will
+			modifier = {
+				stability_factor = 0.10
+				
+			}
+		}
+		GGK_nation_law2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_nation_law2"}
+			picture = triumphant_will
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.2
+				
+				
+			}
+		}
+		GGK_peoples_na = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea GGK_peoples_na"}
+			picture = trotskyite_plot_purged
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.2
+				
+				
+			}
+		}
 	}
 }

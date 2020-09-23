@@ -10,21 +10,26 @@ focus_tree = {
 	default = no
 	focus = {
 		id = KOR_succes_independence
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_kpg
+		cost = 1.00
 		x = 58
 		y = 0
-
+		completion_reward = {
+			country_event = KOR.1
+		}
 	}
 	focus = {
 		id = KOR_imperial_first
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_declare_empire
+		cost = 5.00
 		mutually_exclusive = {
 			focus = KOR_grand_composs
 			focus = KOR_government_first
 			focus = KOR_grand_composs
 			focus = KOR_unexpected
+		}
+		available = {
+			always = no
 		}
 		x = 6
 		y = 0
@@ -33,13 +38,15 @@ focus_tree = {
 	focus = {
 		id = KOR_grand_composs
 		icon = GFX_focus_hol_the_foundations_of_defense
-		cost = 10.00
+		cost = 5.00
 		mutually_exclusive = {
 			focus = KOR_imperial_first
 			focus = KOR_government_first
-			focus = KOR_government_first
 			focus = KOR_imperial_first
 			focus = KOR_unexpected
+		}
+		available = {
+			always = no
 		}
 		x = 14
 		y = 0
@@ -47,13 +54,16 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_government_first
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_pg
+		cost = 5.00
 		mutually_exclusive = {
 			focus = KOR_grand_composs
 			focus = KOR_grand_composs
 			focus = KOR_imperial_first
 			focus = KOR_unexpected
+		}
+		available = {
+			always = no
 		}
 		x = 22
 		y = 0
@@ -62,11 +72,14 @@ focus_tree = {
 	focus = {
 		id = KOR_unexpected
 		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		cost = 10.00
+		cost = 5.00
 		mutually_exclusive = {
 			focus = KOR_government_first
 			focus = KOR_grand_composs
 			focus = KOR_imperial_first
+		}
+		available = {
+			always = no
 		}
 		x = 36
 		y = 0
@@ -75,20 +88,31 @@ focus_tree = {
 	focus = {
 		id = KOR_intervention_ready
 		icon = GFX_goal_tfv_can_compromise_with_quebec
-		cost = 10.00
+		cost = 5.00
 		x = 20
 		y = 8
+		completion_reward = {
+			add_political_power = -50
+			add_war_support = 0.2
+		}
 
 	}
 	focus = {
 		id = KOR_emperor_return
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_imperial_first
 		}
 		mutually_exclusive = {
 			focus = KOR_bohwang
+		}
+		completion_reward = {
+			set_politics = { ruling_party = paternal_autocrat elections_allowed = no }
+			add_ideas = KOR_HRH_Yi_Gang_hog_ade
+			add_ideas = KOR_Kim_Gyu_sik_for_sco
+			add_ideas = KOR_Chang_Taek_Sang_for_sco
+			add_ideas = KOR_Rheem_Eun_Soo_eco_sco
 		}
 		x = 4
 		y = 1
@@ -97,9 +121,12 @@ focus_tree = {
 	focus = {
 		id = KOR_military_control
 		icon = GFX_focus_eng_expose_the_belly_of_the_bear
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_emperor_return
+		}
+		completion_reward = {
+			add_command_power = 20
 		}
 		x = 3
 		y = 2
@@ -108,9 +135,12 @@ focus_tree = {
 	focus = {
 		id = KOR_remove_na
 		icon = GFX_focus_focus_fra_third_empire
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_military_control
+		}
+		completion_reward = {
+			add_political_power = -100
 		}
 		x = 2
 		y = 3
@@ -119,9 +149,15 @@ focus_tree = {
 	focus = {
 		id = KOR_unite_all
 		icon = GFX_focus_generic_treaty
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_remove_na
+		}			
+		completion_reward = {
+			add_popularity = {
+			ideology = social_liberal
+			popularity = -0.2
+			}
 		}
 		x = 2
 		y = 4
@@ -130,12 +166,19 @@ focus_tree = {
 	focus = {
 		id = KOR_bohwang
 		icon = GFX_goal_tfv_sever_ties_with_uk
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_imperial_first
 		}
 		mutually_exclusive = {
 			focus = KOR_emperor_return
+		}
+		completion_reward = {
+			set_politics = { ruling_party = authoritarian_democrat elections_allowed = no }
+			add_ideas = KOR_HRH_Yi_Gang_hog_ade
+			add_ideas = KOR_Kim_Gyu_sik_for_sco
+			add_ideas = KOR_Chang_Taek_Sang_for_sco
+			add_ideas = KOR_Rheem_Eun_Soo_eco_sco
 		}
 		x = 8
 		y = 1
@@ -144,10 +187,13 @@ focus_tree = {
 	focus = {
 		id = KOR_civil_life
 		icon = GFX_goal_generic_consumer_goods
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_bohwang
 			focus = KOR_emperor_return
+		}
+		completion_reward = {
+			add_ideas = GGK_civil_life
 		}
 		x = 6
 		y = 2
@@ -156,9 +202,16 @@ focus_tree = {
 	focus = {
 		id = KOR_NHS
 		icon = GFX_focus_generic_coastal_fort
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_civil_life
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GGK_civil_life1"
+			swap_ideas = {
+				remove_idea = GGK_civil_life
+				add_idea = GGK_civil_life1
+			}
 		}
 		x = 5
 		y = 3
@@ -167,9 +220,13 @@ focus_tree = {
 	focus = {
 		id = KOR_gukminyungem
 		icon = GFX_goal_generic_positive_trade_relations
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_civil_life
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus GGK_gukminyungum"
+			add_ideas = GGK_gukminyungum
 		}
 		x = 7
 		y = 3
@@ -178,12 +235,15 @@ focus_tree = {
 	focus = {
 		id = KOR_tax
 		icon = GFX_focus_fra_devalue_the_franc
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_gukminyungem
 		}
 		prerequisite = {
 			focus = KOR_NHS
+		}
+		completion_reward = {
+			country_event = KOR.2
 		}
 		x = 6
 		y = 4
@@ -192,12 +252,18 @@ focus_tree = {
 	focus = {
 		id = KOR_1party
 		icon = GFX_focus_rom_royal_dictatorship
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_tax
 		}
 		prerequisite = {
 			focus = KOR_unite_all
+		}
+		completion_reward = {
+				add_popularity = {
+				ideology = paternal_autocrat
+				popularity = 0.70
+			}
 		}
 		x = 4
 		y = 5
@@ -206,9 +272,15 @@ focus_tree = {
 	focus = {
 		id = KOR_new_law
 		icon = GFX_focus_generic_monarchy_1
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_bohwang
+		}
+		completion_reward = {
+			add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.50
+			}
 		}
 		x = 9
 		y = 2
@@ -217,9 +289,12 @@ focus_tree = {
 	focus = {
 		id = KOR_form_na
 		icon = GFX_goal_generic_national_unity
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_new_law
+		}
+		completion_reward = {
+			add_ideas = GGK_national_assambly
 		}
 		x = 10
 		y = 3
@@ -228,9 +303,19 @@ focus_tree = {
 	focus = {
 		id = KOR_join_yadang
 		icon = GFX_goal_molotov_ribbentrop_pact
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_form_na
+		}
+		completion_reward = {
+			add_popularity = {
+			ideology = social_liberal
+			popularity = 0.30
+			}
+			add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = 0.30
+			}
 		}
 		x = 10
 		y = 4
@@ -239,12 +324,15 @@ focus_tree = {
 	focus = {
 		id = KOR_choose_pm
 		icon = GFX_focus_hol_continue_the_war_in_batavia
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_join_yadang
 		}
 		prerequisite = {
 			focus = KOR_tax
+		}
+		completion_reward = {
+			country_event = KOR.3
 		}
 		x = 8
 		y = 5
@@ -253,12 +341,27 @@ focus_tree = {
 	focus = {
 		id = KOR_bill_pass
 		icon = GFX_goal_continuous_increase_nu
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_grand_composs
 		}
 		mutually_exclusive = {
 			focus = KOR_bill_not
+		}
+		completion_reward = {
+			set_politics = { ruling_party = social_conservative elections_allowed = yes }
+			set_cosmetic_tag = KOR_EMPIRE
+			create_country_leader = {
+				name = "Yi Kang"
+				desc = ""
+				picture = "gfx/leaders/KOR/Yi_Kang.dds"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+			}
+			add_ideas = KOR_Kim_Ku_hog_sco
+			add_ideas = KOR_Shin_Sung_Mo_sec_sco
+			add_ideas = KOR_Baik_Cha_Bum_sec_sco
+			add_ideas = KOR_Cho_Man_Sik_sec_sco
 		}
 		x = 12
 		y = 1
@@ -267,9 +370,12 @@ focus_tree = {
 	focus = {
 		id = KOR_constitutional_yi_kang
 		icon = GFX_focus_mex_restore_the_army_of_christ
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_bill_pass
+		}
+		completion_reward = {
+			country_event = KOR.5
 		}
 		x = 12
 		y = 2
@@ -278,12 +384,27 @@ focus_tree = {
 	focus = {
 		id = KOR_bill_not
 		icon = GFX_focus_generic_provoke_border_clashes
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_grand_composs
 		}
 		mutually_exclusive = {
 			focus = KOR_bill_pass
+		}
+		completion_reward = {
+			set_politics = { ruling_party = social_conservative elections_allowed = yes }
+			set_cosmetic_tag = KOR_EMPIRE
+			create_country_leader = {
+				name = "Yi Kang"
+				desc = ""
+				picture = "gfx/leaders/KOR/Yi_Kang.dds"
+				expire = "1965.1.1"
+				ideology = social_conservative_subtype
+			}
+			add_ideas = KOR_Kim_Ku_hog_sco
+			add_ideas = KOR_Shin_Sung_Mo_sec_sco
+			add_ideas = KOR_Baik_Cha_Bum_sec_sco
+			add_ideas = KOR_Cho_Man_Sik_sec_sco
 		}
 		x = 16
 		y = 1
@@ -292,9 +413,12 @@ focus_tree = {
 	focus = {
 		id = KOR_no_yi_kang
 		icon = GFX_focus_focus_fra_fascist_threat
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_bill_not
+		}
+		completion_reward = {
+			country_event = KOR.4
 		}
 		x = 16
 		y = 2
@@ -303,10 +427,13 @@ focus_tree = {
 	focus = {
 		id = KOR_peaceful_rev
 		icon = GFX_focus_focus_fra_national_resistance_council
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_no_yi_kang
 			focus = KOR_constitutional_yi_kang
+		}
+		completion_reward = {
+			add_ideas = GGK_peace_rev
 		}
 		x = 14
 		y = 3
@@ -315,9 +442,12 @@ focus_tree = {
 	focus = {
 		id = KOR_na_form
 		icon = GFX_focus_generic_monarchy_2
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_peaceful_rev
+		}
+		completion_reward = {
+			add_ideas = GGK_national_assambly2
 		}
 		x = 12
 		y = 4
@@ -326,9 +456,12 @@ focus_tree = {
 	focus = {
 		id = KOR_problem_royal_money
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_peaceful_rev
+		}
+		completion_reward = {
+			add_political_power = -100
 		}
 		x = 16
 		y = 4
@@ -336,8 +469,8 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_join_reichspakt
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_reichspakt
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_intervention_ready
 		}
@@ -349,6 +482,12 @@ focus_tree = {
 			focus = KOR_make_faction_no_comme
 			focus = KOR_join_3rd_international
 		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_join_reichspakt"
+			GER = {
+				country_event = { id = KOR.10  }
+			}
+		}
 		x = 18
 		y = 9
 
@@ -356,12 +495,15 @@ focus_tree = {
 	focus = {
 		id = KOR_military_rule
 		icon = GFX_goal_support_fascism
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_government_first
 		}
 		mutually_exclusive = {
 			focus = KOR_election
+		}
+		completion_reward = {
+			set_politics = { ruling_party = national_populist elections_allowed = no }
 		}
 		x = 19
 		y = 1
@@ -369,10 +511,13 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_puppet_emperor
-		icon = GFX_focus_SAF_support_ossewabrandwag
-		cost = 10.00
+		icon = GFX_focus_imperial_club
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_military_rule
+		}
+		completion_reward = {
+			add_ideas = GGK_yi_un
 		}
 		x = 19
 		y = 2
@@ -381,10 +526,11 @@ focus_tree = {
 	focus = {
 		id = KOR_kill_res
 		icon = GFX_focus_fra_le_deluge
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_puppet_emperor
 		}
+		
 		x = 17
 		y = 3
 
@@ -392,9 +538,27 @@ focus_tree = {
 	focus = {
 		id = KOR_nationalise
 		icon = GFX_focus_generic_industry_3
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_puppet_emperor
+		}
+		completion_reward = {
+			525 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes	
+				}
+			}
+			527 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes	
+				}
+			}
 		}
 		x = 19
 		y = 3
@@ -403,7 +567,7 @@ focus_tree = {
 	focus = {
 		id = KOR_scret_police
 		icon = GFX_focus_generic_strike_at_democracy2
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_puppet_emperor
 		}
@@ -413,8 +577,8 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_daemakrege
-		icon = GFX_focus_cze_german_puppet
-		cost = 10.00
+		icon = GFX_focus_daemakrege
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_scret_police
 		}
@@ -424,6 +588,9 @@ focus_tree = {
 		prerequisite = {
 			focus = KOR_kill_res
 		}
+		completion_reward = {
+			add_command_power = 50
+		}
 		x = 19
 		y = 4
 
@@ -431,9 +598,13 @@ focus_tree = {
 	focus = {
 		id = KOR_ermachtigungsgesetz
 		icon = GFX_focus_generic_support_the_left_right
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_daemakrege
+		}
+		completion_reward = {
+			add_command_power = 50
+			add_political_power = 100
 		}
 		x = 19
 		y = 5
@@ -441,19 +612,23 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_pax_koreanna
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_goal_holy_korean_empire
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_ermachtigungsgesetz
 		}
+		completion_reward = {
+			add_stability = 0.10
+		}
+		
 		x = 19
 		y = 6
 
 	}
 	focus = {
 		id = KOR_join_3rd_international
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_international
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_intervention_ready
 		}
@@ -461,10 +636,21 @@ focus_tree = {
 			focus = KOR_join_entente
 			focus = KOR_join_reichspakt
 			focus = KOR_make_faction_no_comme
-			focus = KOR_join_reichspakt
-			focus = KOR_make_faction_no_comme
-			focus = KOR_make_faction_no_comme
-			focus = KOR_join_entente
+		}
+		available = {
+			not = {
+				has_government = social_democrat
+				has_government = social_liberal
+				has_government = market_liberal
+				has_government = social_conservative
+				has_government = authoritarian_democrat
+				has_government = paternal_autocrat
+				has_government = national_populist
+			}
+
+		}
+		completion_reward = {
+		FRA = { country_event = KOR.16 }
 		}
 		x = 26
 		y = 9
@@ -473,7 +659,7 @@ focus_tree = {
 	focus = {
 		id = KOR_make_faction_no_comme
 		icon = GFX_goal_molotov_ribbentrop_pact
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_intervention_ready
 		}
@@ -481,10 +667,11 @@ focus_tree = {
 			focus = KOR_join_entente
 			focus = KOR_join_reichspakt
 			focus = KOR_join_3rd_international
-			focus = KOR_join_reichspakt
-			focus = KOR_join_entente
-			focus = KOR_join_3rd_international
-			focus = KOR_join_3rd_international
+		}
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
 		}
 		x = 22
 		y = 9
@@ -492,8 +679,8 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_join_entente
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_canada_help
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_intervention_ready
 		}
@@ -502,8 +689,20 @@ focus_tree = {
 			focus = KOR_make_faction_no_comme
 			focus = KOR_join_3rd_international
 			focus = KOR_join_reichspakt
-			focus = KOR_make_faction_no_comme
-			focus = KOR_join_3rd_international
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus KOR_join_entente"
+			if = {
+				limit = {
+					CAN = {
+						is_faction_leader = yes
+						not_has_socialist_government = yes
+					}
+				}
+				CAN = {
+					country_event = { id = KOR.11 }
+				}
+			}
 		}
 		x = 14
 		y = 9
@@ -512,7 +711,7 @@ focus_tree = {
 	focus = {
 		id = KOR_intervention_asia
 		icon = GFX_focus_usa_focus_on_asia
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_join_3rd_international
 			focus = KOR_make_faction_no_comme
@@ -521,12 +720,15 @@ focus_tree = {
 		}
 		x = 20
 		y = 10
-
+		completion_reward = {
+			add_war_support = 0.10
+		}
+			
 	}
 	focus = {
 		id = KOR_election
 		icon = GFX_focus_generic_strike_at_democracy3
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_government_first
 		}
@@ -539,13 +741,16 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_syngman
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_syngman_rhee
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_election
 		}
 		mutually_exclusive = {
 			focus = KOR_wunbro
+		}
+		available = {
+			always = no
 		}
 		x = 24
 		y = 2
@@ -554,9 +759,15 @@ focus_tree = {
 	focus = {
 		id = KOR_1_personlim
 		icon = GFX_focus_spr_the_anti_fascist_workers_revolution
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_syngman
+		}
+		completion_reward = {
+			add_ideas = GGK_nation_law
+		}
+		completion_reward = {
+			add_political_power = 200
 		}
 		x = 23
 		y = 3
@@ -564,13 +775,16 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_wunbro
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_ryuh_woonhyung
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_election
 		}
 		mutually_exclusive = {
 			focus = KOR_syngman
+		}
+		available = {
+			always = no
 		}
 		x = 28
 		y = 2
@@ -579,10 +793,13 @@ focus_tree = {
 	focus = {
 		id = KOR_nation_law
 		icon = GFX_focus_jap_spiritual_mobilization
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_wunbro
 			focus = KOR_syngman
+		}
+		completion_reward = {
+			add_ideas = GGK_nation_law
 		}
 		x = 26
 		y = 3
@@ -591,9 +808,19 @@ focus_tree = {
 	focus = {
 		id = KOR_no_royal
 		icon = GFX_focus_rom_abdicate
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_nation_law
+		}
+		completion_reward = {
+			add_popularity = {
+			ideology = authoritarian_democrat
+			popularity = -1.0
+			}
+			add_popularity = {
+			ideology = paternal_autocrat
+			popularity = -1.0
+			}
 		}
 		x = 25
 		y = 4
@@ -602,9 +829,23 @@ focus_tree = {
 	focus = {
 		id = KOR_no_syndcal
 		icon = GFX_focus_eng_crush_the_dream
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_nation_law
+		}
+		completion_reward = {
+			add_popularity = {
+			ideology = totalist
+			popularity = -1.0
+			}
+			add_popularity = {
+			ideology = radical_socialist
+			popularity = -1.0
+			}
+			add_popularity = {
+			ideology = syndicalist
+			popularity = -1.0
+			}
 		}
 		x = 27
 		y = 4
@@ -613,12 +854,18 @@ focus_tree = {
 	focus = {
 		id = KOR_nation_law_2
 		icon = GFX_goal_generic_forceful_treaty
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_no_syndcal
 		}
 		prerequisite = {
 			focus = KOR_no_royal
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GGK_nation_law
+				add_idea = GGK_nation_law2
+			}
 		}
 		x = 26
 		y = 5
@@ -627,9 +874,12 @@ focus_tree = {
 	focus = {
 		id = KOR_modern_social
 		icon = GFX_focus_generic_soviet_politics
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_wunbro
+		}
+		completion_reward = {
+			add_stability = 0.10
 		}
 		x = 29
 		y = 3
@@ -637,10 +887,13 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_diplomatic_britain
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_international
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_modern_social
+		}
+		completion_reward = {
+			country_event = KOR.7
 		}
 		x = 29
 		y = 4
@@ -649,9 +902,12 @@ focus_tree = {
 	focus = {
 		id = KOR_social_ecurity
 		icon = GFX_goal_support_democracy
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_diplomatic_britain
+		}
+		completion_reward = {
+			add_stability = 0.50
 		}
 		x = 29
 		y = 5
@@ -660,9 +916,12 @@ focus_tree = {
 	focus = {
 		id = KOR_peoples_na
 		icon = GFX_focus_generic_join_comintern
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_unexpected
+		}
+		completion_reward = {
+			add_ideas = GGK_peoples_na
 		}
 		x = 36
 		y = 1
@@ -671,9 +930,12 @@ focus_tree = {
 	focus = {
 		id = KOR_conference
 		icon = GFX_goal_support_communism
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_peoples_na
+		}
+		completion_reward = {
+			country_event = KOR.8
 		}
 		x = 36
 		y = 2
@@ -681,8 +943,8 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_syndcalism
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_goal_NOR_syndicalist
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_conference
 		}
@@ -691,6 +953,9 @@ focus_tree = {
 			focus = KOR_raidcal
 			focus = KOR_totalism
 			focus = KOR_raidcal
+		}
+		available = {
+			always = no
 		}
 		x = 32
 		y = 3
@@ -699,9 +964,12 @@ focus_tree = {
 	focus = {
 		id = KOR_labors_law
 		icon = GFX_focus_generic_strike_at_democracy1
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_syndcalism
+		}
+		completion_reward = {
+			add_manpower = 5000
 		}
 		x = 31
 		y = 4
@@ -710,9 +978,12 @@ focus_tree = {
 	focus = {
 		id = KOR_woman_vote
 		icon = GFX_focus_spr_class_war
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_syndcalism
+		}
+		completion_reward = {
+			add_stability = 0.5
 		}
 		x = 33
 		y = 4
@@ -720,8 +991,8 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_totalism
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_goal_ideology_totalist
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_conference
 		}
@@ -730,6 +1001,9 @@ focus_tree = {
 			focus = KOR_raidcal
 			focus = KOR_syndcalism
 			focus = KOR_raidcal
+		}
+		available = {
+			always = no
 		}
 		x = 36
 		y = 3
@@ -738,9 +1012,12 @@ focus_tree = {
 	focus = {
 		id = KOR_juche_ideology
 		icon = GFX_focus_focus_fra_liberte_egalite_solidarite
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_totalism
+		}
+		completion_reward = {
+			add_war_support = 0.50
 		}
 		x = 35
 		y = 4
@@ -749,9 +1026,12 @@ focus_tree = {
 	focus = {
 		id = KOR_demand_sacrifice
 		icon = GFX_focus_generic_military_mission
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_totalism
+		}
+		completion_reward = {
+			add_manpower = 5000
 		}
 		x = 37
 		y = 4
@@ -759,8 +1039,8 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_raidcal
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_goal_ideology_radical_socialist
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_conference
 		}
@@ -770,6 +1050,9 @@ focus_tree = {
 			focus = KOR_totalism
 			focus = KOR_syndcalism
 		}
+		available = {
+			always = no
+		}
 		x = 40
 		y = 3
 
@@ -777,9 +1060,12 @@ focus_tree = {
 	focus = {
 		id = KOR_kill_oppose
 		icon = GFX_focus_ger_bulwark_against_bolshevism
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_raidcal
+		}
+		completion_reward = {
+			add_manpower = -5000
 		}
 		x = 39
 		y = 4
@@ -788,9 +1074,12 @@ focus_tree = {
 	focus = {
 		id = KOR_big_right
 		icon = GFX_goal_generic_war_with_comintern
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_raidcal
+		}
+		completion_reward = {
+			add_political_power = 100
 		}
 		x = 41
 		y = 4
@@ -799,7 +1088,7 @@ focus_tree = {
 	focus = {
 		id = KOR_yesman_good
 		icon = GFX_goal_tfv_burn_the_royal_portraits
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_kill_oppose
 			focus = KOR_big_right
@@ -808,6 +1097,9 @@ focus_tree = {
 			focus = KOR_labors_law
 			focus = KOR_woman_vote
 		}
+		completion_reward = {
+			country_event = KOR.9
+		}
 		x = 36
 		y = 5
 
@@ -815,9 +1107,14 @@ focus_tree = {
 	focus = {
 		id = KOR_military_rev
 		icon = GFX_focus_generic_combined_arms
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_succes_independence
+		}
+		completion_reward = {
+			army_experience = 10
+			navy_experience = 10
+			air_experience = 10
 		}
 		x = 52
 		y = 1
@@ -826,9 +1123,12 @@ focus_tree = {
 	focus = {
 		id = KOR_army_rev
 		icon = GFX_focus_generic_license_production
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_military_rev
+		}
+		completion_reward = {
+			army_experience = 25
 		}
 		x = 46
 		y = 2
@@ -837,12 +1137,20 @@ focus_tree = {
 	focus = {
 		id = KOR_fire_central
 		icon = GFX_focus_generic_air_defense
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_army_rev
 		}
 		mutually_exclusive = {
 			focus = KOR_tank_central
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_fire_power
+				bonus = 0.25
+				uses = 3
+				category = land_doctrine
+			}
 		}
 		x = 45
 		y = 3
@@ -851,9 +1159,19 @@ focus_tree = {
 	focus = {
 		id = KOR_cannon_first
 		icon = GFX_focus_NZL_bob_semple_tank
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_fire_central
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_equipment_effort
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
 		}
 		x = 45
 		y = 4
@@ -862,12 +1180,22 @@ focus_tree = {
 	focus = {
 		id = KOR_tank_central
 		icon = GFX_goal_continuous_armor_production
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_army_rev
 		}
 		mutually_exclusive = {
 			focus = KOR_fire_central
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = motorized_equipment
+				category = cat_mechanized_equipment
+			}
 		}
 		x = 47
 		y = 3
@@ -876,9 +1204,21 @@ focus_tree = {
 	focus = {
 		id = KOR_experimental_tank
 		icon = GFX_goal_generic_army_tanks
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_tank_central
+		}
+		completion_reward = {
+			army_experience = 15
+			add_tech_bonus = {
+				name = KOR_light_medium_armor
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = cat_light_armor
+				category = cat_medium_armor
+				category = cat_heavy_armor
+			}
 		}
 		x = 47
 		y = 4
@@ -887,7 +1227,7 @@ focus_tree = {
 	focus = {
 		id = KOR_SK_defence_force
 		icon = GFX_focus_generic_little_entente
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_experimental_tank
 		}
@@ -901,9 +1241,12 @@ focus_tree = {
 	focus = {
 		id = KOR_navy_rev
 		icon = GFX_focus_generic_navy_battleship2
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_military_rev
+		}
+		completion_reward = {
+			navy_experience = 25
 		}
 		x = 52
 		y = 2
@@ -912,12 +1255,22 @@ focus_tree = {
 	focus = {
 		id = KOR_battleship_first
 		icon = GFX_goal_generic_navy_battleship
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_navy_rev
 		}
 		mutually_exclusive = {
 			focus = KOR_carrier_first
+		}
+		completion_reward = {
+			navy_experience = 5
+			add_tech_bonus = {
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = bb_tech
+				category = shbb_tech
+			}
 		}
 		x = 51
 		y = 3
@@ -926,12 +1279,21 @@ focus_tree = {
 	focus = {
 		id = KOR_carrier_first
 		icon = GFX_goal_generic_navy_carrier
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_navy_rev
 		}
 		mutually_exclusive = {
 			focus = KOR_battleship_first
+		}
+		completion_reward = {
+			navy_experience = 5
+			add_tech_bonus = {
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = cv_tech
+			}
 		}
 		x = 53
 		y = 3
@@ -940,10 +1302,18 @@ focus_tree = {
 	focus = {
 		id = KOR_destroyer_first
 		icon = GFX_focus_generic_destroyer
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_carrier_first
 			focus = KOR_battleship_first
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = FKR_focus_destroyer
+				bonus = 0.5
+				uses = 2
+				category = dd_tech
+			}
 		}
 		x = 52
 		y = 4
@@ -952,10 +1322,19 @@ focus_tree = {
 	focus = {
 		id = KOR_sub_first
 		icon = GFX_goal_generic_navy_submarine
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_battleship_first
 			focus = KOR_carrier_first
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = ss_tech
+			}
 		}
 		x = 50
 		y = 4
@@ -964,10 +1343,19 @@ focus_tree = {
 	focus = {
 		id = KOR_cruiser_build
 		icon = GFX_focus_generic_cruiser2
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_carrier_first
 			focus = KOR_battleship_first
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = cl_tech
+				category = ca_tech
+			}
 		}
 		x = 54
 		y = 4
@@ -976,7 +1364,7 @@ focus_tree = {
 	focus = {
 		id = KOR_ocean_fleet
 		icon = GFX_focus_por_concordat
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_cruiser_build
 		}
@@ -986,6 +1374,13 @@ focus_tree = {
 		prerequisite = {
 			focus = KOR_sub_first
 		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.25
+				uses = 3
+				category = base_strike_main
+			}
+		}
 		x = 52
 		y = 5
 
@@ -993,9 +1388,12 @@ focus_tree = {
 	focus = {
 		id = KOR_air_force_rev
 		icon = GFX_focus_eng_special_air_service
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_military_rev
+		}
+		completion_reward = {
+			air_experience = 25
 		}
 		x = 58
 		y = 2
@@ -1004,12 +1402,22 @@ focus_tree = {
 	focus = {
 		id = KOR_focus_fighter
 		icon = GFX_focus_jap_zero
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_air_force_rev
 		}
 		mutually_exclusive = {
 			focus = KOR_bomber_focus
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = light_fighter
+				category = cat_heavy_fighter
+			}
 		}
 		x = 57
 		y = 3
@@ -1018,12 +1426,22 @@ focus_tree = {
 	focus = {
 		id = KOR_bomber_focus
 		icon = GFX_focus_generic_cryptologic_bomb
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_air_force_rev
 		}
 		mutually_exclusive = {
 			focus = KOR_focus_fighter
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 0.35
+				ahead_reduction = 1
+				uses = 2
+				category = tactical_bomber
+				category = cat_strategic_bomber
+			}
 		}
 		x = 59
 		y = 3
@@ -1032,10 +1450,18 @@ focus_tree = {
 	focus = {
 		id = KOR_experimental_paratrooper
 		icon = GFX_goal_generic_air_bomber
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_bomber_focus
 			focus = KOR_focus_fighter
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_airborne
+				bonus = 1.0
+				uses = 2
+				category = para_tech
+			}
 		}
 		x = 58
 		y = 4
@@ -1044,9 +1470,17 @@ focus_tree = {
 	focus = {
 		id = KOR_make_paratrooper
 		icon = GFX_focus_generic_paratrooper
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_experimental_paratrooper
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = KOR_airborne
+				bonus = 1.0
+				uses = 2
+				category = para_tech
+			}
 		}
 		x = 58
 		y = 5
@@ -1055,9 +1489,17 @@ focus_tree = {
 	focus = {
 		id = KOR_5_year_plan
 		icon = GFX_goal_generic_production
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_succes_independence
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
 		}
 		x = 64
 		y = 1
@@ -1066,9 +1508,19 @@ focus_tree = {
 	focus = {
 		id = KOR_civil_fac
 		icon = GFX_goal_continuous_non_factory_construct
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_5_year_plan
+		}
+		completion_reward = {
+			525 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes	
+				}
+			}
 		}
 		x = 62
 		y = 2
@@ -1077,9 +1529,27 @@ focus_tree = {
 	focus = {
 		id = KOR_urbanization
 		icon = GFX_focus_generic_aluminum
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_civil_fac
+		}
+		completion_reward = {
+			527 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes	
+				}
+			}
+			1103 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes	
+				}
+			}
 		}
 		x = 61
 		y = 3
@@ -1088,9 +1558,46 @@ focus_tree = {
 	focus = {
 		id = KOR_transversal_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_civil_fac
+		}
+		completion_reward = {	
+			525 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			797 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1106 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			527 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			1104 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 		x = 63
 		y = 3
@@ -1099,9 +1606,27 @@ focus_tree = {
 	focus = {
 		id = KOR_military_fac
 		icon = GFX_goal_continuous_reduce_training_time
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_5_year_plan
+		}
+		completion_reward = {
+			525 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes	
+				}
+			}
+			527 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes	
+				}
+			}
 		}
 		x = 66
 		y = 2
@@ -1110,9 +1635,27 @@ focus_tree = {
 	focus = {
 		id = KOR_military_fac_build
 		icon = GFX_goal_continuous_repairments
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_military_fac
+		}
+		completion_reward = {
+			525 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes	
+				}
+			}
+			527 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes	
+				}
+			}
 		}
 		x = 65
 		y = 3
@@ -1121,9 +1664,12 @@ focus_tree = {
 	focus = {
 		id = KOR_identity
 		icon = GFX_focus_ger_return_of_the_kaiser
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_1party
+		}
+		completion_reward = {
+			add_war_support = 0.2
 		}
 		x = 4
 		y = 6
@@ -1132,9 +1678,12 @@ focus_tree = {
 	focus = {
 		id = KOR_political_order
 		icon = GFX_focus_generic_royal_wedding
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_choose_pm
+		}
+		completion_reward = {
+			add_stability = 0.05
 		}
 		x = 8
 		y = 6
@@ -1143,10 +1692,14 @@ focus_tree = {
 	focus = {
 		id = KOR_establish_na_demo
 		icon = GFX_focus_generic_diplomatic_treaty
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_peaceful_rev
 		}
+		completion_reward = {
+			add_stability = 0.05
+		}
+
 		x = 14
 		y = 4
 
@@ -1154,7 +1707,7 @@ focus_tree = {
 	focus = {
 		id = KOR_no_royal_power
 		icon = GFX_focus_rom_parties_end
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_establish_na_demo
 		}
@@ -1164,16 +1717,23 @@ focus_tree = {
 		prerequisite = {
 			focus = KOR_na_form
 		}
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.2
+		}
 		x = 14
 		y = 5
 
 	}
 	focus = {
 		id = KOR_god_save_the_korea
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_god_save_the_emperor
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_no_royal_power
+		}
+		completion_reward = {
+			add_ideas = GGK_god_save_the_emperor
 		}
 		x = 14
 		y = 6
@@ -1182,9 +1742,12 @@ focus_tree = {
 	focus = {
 		id = KOR_strite_vote
 		icon = GFX_focus_eng_decolonization
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_1_personlim
+		}
+		completion_reward = {
+			add_political_power = 200
 		}
 		x = 23
 		y = 4
@@ -1193,9 +1756,12 @@ focus_tree = {
 	focus = {
 		id = KOR_duty_edu
 		icon = GFX_focus_generic_military_academy
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_strite_vote
+		}
+		completion_reward = {
+			add_war_support = 0.2
 		}
 		x = 23
 		y = 5
@@ -1203,8 +1769,8 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_god_save_the_democratic
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_democracy
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_social_ecurity
 			focus = KOR_duty_edu
@@ -1212,16 +1778,22 @@ focus_tree = {
 		prerequisite = {
 			focus = KOR_nation_law_2
 		}
+		completion_reward = {
+			add_stability = 0.5
+		}
 		x = 26
 		y = 6
 
 	}
 	focus = {
 		id = KOR_red_korea
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_red_korea
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_yesman_good
+		}
+		completion_reward = {
+			add_stability = 0.50
 		}
 		x = 36
 		y = 6
@@ -1230,9 +1802,12 @@ focus_tree = {
 	focus = {
 		id = KOR_research_team
 		icon = GFX_focus_generic_socialist_science
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_military_fac
+		}
+		completion_reward = {
+			add_research_slot = 2
 		}
 		x = 67
 		y = 3
@@ -1241,7 +1816,7 @@ focus_tree = {
 	focus = {
 		id = KOR_economi_succes
 		icon = GFX_goal_generic_air_production
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_research_team
 		}
@@ -1260,61 +1835,80 @@ focus_tree = {
 	}
 	focus = {
 		id = KOR_war_mon
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_attack_mon
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_intervention_asia
 		}
-		x = 14
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = MON
+			}
+		}
+		x = 15
 		y = 11
 
 	}
 	focus = {
 		id = KOR_friend_jap
 		icon = GFX_focus_chi_collaboration_with_the_japanese
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_intervention_asia
 		}
 		mutually_exclusive = {
 			focus = KOR_war_jap
 		}
-		x = 17
+		completion_reward = {
+			JAP = { country_event = KOR.17 }
+		}
+		x = 18
 		y = 11
 
 	}
 	focus = {
 		id = KOR_war_jap
 		icon = GFX_focus_attack_japan
-		cost = 10.00
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_intervention_asia
 		}
 		mutually_exclusive = {
 			focus = KOR_friend_jap
 		}
-		x = 19
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = JAP
+			}
+		}
+		x = 20
 		y = 11
 
 	}
 	focus = {
 		id = KOR_friend_qing
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_peace_qing
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_intervention_asia
 		}
 		mutually_exclusive = {
 			focus = KOR_war_qing
+			focus = KOR_puppetry_qing
 		}
-		x = 22
+		completion_reward = {
+			QIE = { country_event = KOR.17 }
+		}
+		x = 23
 		y = 11
 
 	}
 	focus = {
 		id = KOR_war_qing
-		icon = GFX_goal_unknown
-		cost = 10.00
+		icon = GFX_focus_qing
+		cost = 5.00
 		prerequisite = {
 			focus = KOR_intervention_asia
 		}
@@ -1322,21 +1916,13 @@ focus_tree = {
 			focus = KOR_friend_qing
 			focus = KOR_puppetry_qing
 		}
-		x = 24
-		y = 11
-
-	}
-	focus = {
-		id = KOR_puppetry_qing
-		icon = GFX_goal_unknown
-		cost = 10.00
-		prerequisite = {
-			focus = KOR_intervention_asia
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = QIE
+			}
 		}
-		mutually_exclusive = {
-			focus = KOR_war_qing
-		}
-		x = 26
+		x = 25
 		y = 11
 
 	}

@@ -280,12 +280,59 @@ focus_tree = {
 			focus = GGK_qing_military_training
 		}
 		completion_reward = {
+				random_owned_controlled_state = {
+					prioritize = { 803 }
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+					create_unit = {
+						division = "name = \"정예 광복군 사단\" division_template = \"지역 의용군\" start_experience_factor = 0.5 start_equipment_factor = 0.1"
+						owner = KOR
+					}
+				}
 			country_event = GGK.4
 			set_country_flag = KOR_revolt_flag
 			start_civil_war = {
 				ruling_party = social_liberal 
 				ideology = social_conservative
-				size = 0.7
+				size = 0.5
 				only_own_territory = no
 				capital = 527
 				states = { 
@@ -360,6 +407,7 @@ create_field_marshal = {
 
 create_corps_commander = {
   name = "이강"
+  id = 3002
   picture = "Yi_Kang.dds"
   traits = { politically_connected
 			 media_personality
@@ -374,9 +422,11 @@ create_corps_commander = {
 
 create_corps_commander = {
   name = "이우"
+  id = 3001
   picture = "Portrait_KOR_Yi_Wu.dds"
   traits = { politically_connected
 			 }
+
   skill = 2
 
   attack_skill = 6

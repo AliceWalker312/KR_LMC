@@ -30,3 +30,71 @@ spriteTypes = {
 		name = "GFX_focus_first_name_change"
 		textureFile = "gfx/interface/goals/GGK/focus_first_name_change.dds"
 	}
+	spriteType = {
+		name = "GFX_focus_declare_empire"
+		textureFile = "gfx/interface/goals/focus_declare_empire.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_god_save_the_emperor"
+		textureFile = "gfx/interface/goals/focus_god_save_the_emperor.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_imperial_club"
+		textureFile = "gfx/interface/goals/focus_imperial_club.dds"
+	}
+	spriteType = {
+		name = "GFX_goal_holy_korean_empire"
+		textureFile = "gfx/interface/goals/goal_holy_korean_empire.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_syngman_rhee"
+		textureFile = "gfx/interface/goals/focus_syngman_rhee.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_ryuh_woonhyung"
+		textureFile = "gfx/interface/goals/focus_ryuh_woonhyung.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_daemakrege"
+		textureFile = "gfx/interface/goals/focus_daemakrege.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_democracy"
+		textureFile = "gfx/interface/goals/focus_democracy.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_red_korea"
+		textureFile = "gfx/interface/goals/focus_red_korea.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_pg"
+		textureFile = "gfx/interface/goals/focus_pg.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_reichspakt"
+		textureFile = "gfx/interface/goals/focus_reichspakt.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_international"
+		textureFile = "gfx/interface/goals/focus_international.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_kpg"
+		textureFile = "gfx/interface/goals/focus_kpg.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_attack_mon"
+		textureFile = "gfx/interface/goals/focus_attack_mon.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_qing"
+		textureFile = "gfx/interface/goals/focus_qing.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_peace_qing"
+		textureFile = "gfx/interface/goals/focus_peace_qing.dds"
+	}
+	spriteType = {
+		name = "GFX_focus_kor_dragon_under_tiger"
+		textureFile = "gfx/interface/goals/focus_kor_dragon_under_tiger.dds"
+	}

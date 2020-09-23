@@ -34,4 +34,24 @@ spriteTypes = {
 		name = "GFX_idea_GGK_nopay"
 		texturefile = "gfx/interface/ideas/idea_GGK_nopay.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_civil_life"
+		texturefile = "gfx/interface/ideas/idea_civil_life.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KOR_empire_royal_family"
+		texturefile = "gfx/interface/ideas/KOR_empire_royal_family.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_advisor_kim_koo"
+		texturefile = "gfx/interface/ideas/advisor_kim_koo.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_KOR_phlip_jason"
+		texturefile = "gfx/interface/ideas/KOR_phlip_jason.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_idea_Hwan_guk"
+		texturefile = "gfx/interface/ideas/idea_Hwan-guk.dds"
+	}
 }

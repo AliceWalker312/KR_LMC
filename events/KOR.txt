@@ -1,64 +1,378 @@
 add_namespace = KOR
 
+####어느 이념을 지도자로 할것인가####
 country_event = {
 	id = KOR.1
 	title = KOR.1.t
-	desc = KOR.1.d
+	desc = KOR.1.desc
 	picture = GFX_report_event_chinese_japanese_handshake
 
 	fire_only_once = yes
 	is_triggered_only = yes
-
-	
-	trigger = {
-		tag = KOR
-		525 = { is_controlled_by = KOR }
-		525 = { is_owned_by = KOR }
-		527 = { is_controlled_by = KOR }
-		527 = { is_owned_by = KOR }
-		KOR = { has_war_with = GGK }
-		KOR = { has_war_with = JAP}
-	}
 	
 	option = {
 		name = KOR.1.a
-		JAP = { country_event = { id = KOR.2 days = 1 } }
+		complete_national_focus = KOR_imperial_first
 	}
-
 	option = {
 		name = KOR.1.b
-		ai_chance = { factor = 0 }
+		complete_national_focus = KOR_grand_composs
+	}
+	option = {
+		name = KOR.1.c
+		complete_national_focus = KOR_government_first
+	}
+	option = {
+		name = KOR.1.e
+		complete_national_focus = KOR_unexpected
 	}
 }
 
+####세율 문제####
 country_event = {
 	id = KOR.2
 	title = KOR.2.t
 	desc = KOR.2.d
-	picture = GFX_report_event_japanese_army_parade
+	picture = GFX_report_event_election_vote
 
 	fire_only_once = yes
-	is_triggered_only = no
+	is_triggered_only = yes
 	
 	option = {
 		name = KOR.2.a
-		KOR = { country_event = { id = KOR.3 days = 1 }}
+		add_stability = 0.05
+		add_political_power = -100
+	}
+	option = {
+		name = KOR.2.b
+		add_stability = -0.05
+		add_political_power = 100
 	}
 }
 
+####총리선출####
 country_event = {
 	id = KOR.3
 	title = KOR.3.t
 	desc = KOR.3.d
-	picture = GFX_report_event_japanese_chinese_surrender
+	picture = GFX_report_event_election_vote
 
 	fire_only_once = yes
-	is_triggered_only = no
-
-
+	is_triggered_only = yes
+	
 	option = {
 		name = KOR.3.a
-		annex_country = { target = GGK }
-		white_peace = JAP
+		add_ideas = { GGK_kim_koo }
+	}
+	option = {
+		name = KOR.3.b
+		add_ideas = { GGK_phlip_jason }
+
+	}
+}
+####이우 황제즉위####
+country_event = {
+	id = KOR.4
+	title = KOR.4.t
+	desc = KOR.4.d
+	picture = GFX_report_event_asian_politicians
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.4.a
+		create_country_leader = {
+	        name = "Yi Wu"
+	        desc = ""
+	        picture = "gfx/leaders/KOR/Portrait_KOR_Yi_Wu.dds"
+	        expire = "1965.1.1"
+	        ideology = social_conservative_subtype
+		}
+	}
+}
+
+####이강 대타협안 찬성####
+country_event = {
+	id = KOR.5
+	title = KOR.5.t
+	desc = KOR.5.d
+	picture = GFX_report_event_asian_politicians
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.5.a
+	}
+}
+
+####1대 대통령 선거####
+country_event = {
+	id = KOR.6
+	title = KOR.6.t
+	desc = KOR.6.d
+	picture = GFX_report_event_election_vote
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.6.a
+		set_politics = { ruling_party = market_liberal elections_allowed = yes }
+		complete_national_focus = KOR_syngman
+	}
+	option = {
+		name = KOR.6.b
+		set_politics = { ruling_party = social_democrat elections_allowed = yes }
+		complete_national_focus = KOR_wunbro
+	}
+}
+
+####브리튼 연방과 수교####
+country_event = {
+	id = KOR.7
+	title = KOR.7.t
+	desc = KOR.7.d
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.7.a
+		ENG  = { add_opinion_modifier = { target = ROOT modifier = in_faction } }
+	}
+}
+
+####조선 노동조합 총회####
+country_event = {
+	id = KOR.8
+	title = KOR.8.t
+	desc = KOR.8.d
+	picture = GFX_report_event_election_vote
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.8.a
+			set_politics = { ruling_party = totalist elections_allowed = no }
+			complete_national_focus = KOR_totalism
+	}
+	option = {
+		name = KOR.8.b
+			set_politics = { ruling_party = radical_socialist elections_allowed = no }
+			complete_national_focus = KOR_raidcal
+	}
+	option = {
+		name = KOR.8.c
+			set_politics = { ruling_party = syndicalist elections_allowed = no }
+			complete_national_focus = KOR_syndcalism
+	}
+}
+
+####황실의 운명####
+country_event = {
+	id = KOR.9
+	title = KOR.9.t
+	desc = KOR.9.d
+	picture = GFX_report_event_election_vote
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.9.a
+		KOR = {
+			remove_unit_leader = 3001
+			remove_unit_leader = 3002
+		}
+	}
+	option = {
+		name = KOR.9.b
+		KOR = {
+			remove_unit_leader = 3001
+			remove_unit_leader = 3002
+		}
+	}
+}
+
+country_event = {
+	id = KOR.10
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.10"}
+	title = KOR.10.t
+	desc = KOR.10.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.10.a
+		ai_chance = { factor = 95 }
+		add_political_power = 140
+		effect_tooltip = { add_to_faction = KOR }
+		KOR = { country_event = { id = KOR.12 hours = 5 } }
+	}
+	option = {
+		name = KOR.10.b
+		ai_chance = { factor = 5 }
+		add_political_power = -20
+		KOR = { country_event = { id = KOR.13 hours = 5 } }
+	}
+}
+
+country_event = {
+	id = KOR.11
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.11"}
+	title = KOR.11.t
+	desc = KOR.11.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.11.a
+		ai_chance = { factor = 95 }
+		add_political_power = 140
+		effect_tooltip = { add_to_faction = KOR }
+		KOR = { country_event = { id = KOR.14 hours = 5 } }
+	}
+	option = {
+		name = KOR.11.b
+		ai_chance = { factor = 5 }
+		add_political_power = -20
+		KOR = { country_event = { id = KOR.15 hours = 5 } }
+	}
+}
+
+country_event = {
+	id = KOR.12
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.12"}
+	title = KOR.12.t
+	desc = KOR.12.d
+	picture = GFX_report_event_generic_diplomacy3
+
+	is_triggered_only = yes
+
+	option = {
+		name = KOR.12.a
+		add_political_power = 60
+		FROM = { add_to_faction = ROOT }
+	}
+}
+
+country_event = {
+	id = KOR.13
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.13"}
+	title = KOR.13.t
+	desc = KOR.13.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	option = {
+		name = KOR.13.a
+		add_political_power = -20
+	}
+}
+
+country_event = {
+	id = KOR.14
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.14"}
+	title = KOR.14.t
+	desc = KOR.14.d
+	picture = GFX_report_event_generic_diplomacy3
+
+	is_triggered_only = yes
+
+	option = {
+		name = korfor.5.a
+		add_political_power = 60
+		FROM = { add_to_faction = ROOT }
+	}
+}
+
+country_event = {
+	id = KOR.15
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.15"}
+	title = KOR.15.t
+	desc = KOR.15.d
+	picture = GFX_report_event_generic_diplomacy4
+
+	is_triggered_only = yes
+
+	option = {
+		name = KOR.15.a
+		add_political_power = -20
+	}
+}
+
+country_event = {
+	id = KOR.16
+	immediate = {log = "[GetDateText]: [Root.GetName]: event KOR.16"}
+	title = KOR.16.t
+	desc = KOR.16.d
+	picture = GFX_report_event_generic_diplomacy1
+
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.16.a
+		ai_chance = { factor = 95 }
+		add_political_power = 140
+		effect_tooltip = { add_to_faction = KOR }
+		KOR = { country_event = { id = KOR.17 hours = 5 } }
+	}
+	option = {
+		name = KOR.16.b
+		ai_chance = { factor = 5 }
+		add_political_power = -20
+		KOR = { country_event = { id = KOR.18 hours = 5 } }
+	}
+}
+
+country_event = { # 한국의 조약 제안
+	id = KOR.17
+	title = KOR.17.t
+	desc = KOR.17.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = { # 조약을 체결해야 한다... 지금 당장은
+		name = KOR.17.a
+		ai_chance = {
+			base = 100
+		}
+		diplomatic_relation = {
+			country = FROM
+			relation = non_aggression_pact
+			active = yes
+		}
+		FROM = { country_event = { id = KOR.18 days = 1 } }
+	}
+}
+
+country_event = { # 조약 승인
+	id = KOR.18
+	title = KOR.18.t
+	desc = KOR.18.d
+	picture = GFX_report_event_japan_europe_pact
+
+	is_triggered_only = yes
+	
+	option = {
+		name = KOR.18.a
+		ai_chance = {
+			base = 10
+		}
+		effect_tooltip = {
+			diplomatic_relation = {
+				country = FROM
+				relation = non_aggression_pact
+				active = yes
+			}
+		}
 	}
 }
